@@ -15,13 +15,13 @@ def start():
 	import json
 	from random import randint
 	from lib.check import chost,flib
-	host = raw_input(C+'[*]'+W+'asm>[reverse_ip] Host/ip: ') # Target
+	host = raw_input(C+'[*]'+W+'asm>[reverse_ip] Host: ') # Target
 	file = raw_input(C+'[*]'+W+'asm>[reverse_ip] show File output?y/n ') # y = Save To File n = Show Recv
 	dom = flib(host) # Bad protocol [http:// https://]
 	xdom = 'http://domains.yougetsignal.com/domains.php';
 	if chost(dom) == True: # Check For Host
 		print '[*] Starting ... [*]'
-		print '[*] ip/host %s is Activ [*]'%dom
+		print '[*] host %s is Activ [*]'%dom
 		print '[*] Please White ... [*]'
 		try:
 			rQx = post(xdom, {'remoteAddress':dom}) # Request Send
